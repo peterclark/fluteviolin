@@ -1,22 +1,33 @@
 head
-  title Semantic Jade
+  title Flute & Violin
   
 body
   +header
   
-  div.ui.vertical.stripe.segment
-    div.ui.text.container
-      h4.ui.horizontal.header.divider
-        a(href='#') Primary & Secondary Buttons
-      a.ui.primary.button A Primary Button
-      a.ui.secondary.button A Secondary Button
-
-      h4.ui.horizontal.header.divider
-        a(href='#') Animated Buttons
-      .ui.animated.fade.button(tabindex="0")
-        .visible.content Sign-up for a Pro account
-        .hidden.content
-          | $12.99 a month
+  div.ui.vertical.stripe.segment#listen
+    div.ui.container
+      h3.ui.horizontal.divider.header
+        i.music.icon
+        | Listen
+      
+    div.ui.grid.container
+      div.doubling.stackable.four.column.row
+        div.column
+          a.massive.ui.labeled.icon.red.button
+            i.play.icon
+            | Autumn
+        div.column
+          a.massive.ui.labeled.icon.primary.button
+            i.play.icon
+            | Bouree    
+        div.column    
+          a.massive.ui.labeled.icon.primary.button
+            i.play.icon
+            | Canon
+        div.column    
+          a.massive.ui.labeled.icon.primary.button
+            i.play.icon
+            | Frivolity
 
   +footer
 

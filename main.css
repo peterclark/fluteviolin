@@ -2,9 +2,21 @@
   display: none;
 }
 
-.masthead.segment {
-  min-height: 400px;
+div.ui.vertical.masthead {
+  height: 700px;
   padding: 1em 0em;
+  background: url(/desktop.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#listen {
+  height: 400px;
+}
+#listen h3.horizontal.divider.header {
+  margin-top: 0;
 }
 .masthead .logo.item img {
   margin-right: 1em;
