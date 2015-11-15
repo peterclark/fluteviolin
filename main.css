@@ -5,7 +5,7 @@
 div.ui.vertical.masthead {
   height: 700px;
   padding: 1em 0em;
-  background: url(/desktop.jpg) no-repeat center center fixed;
+  background: url(/desktop.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,10 +13,26 @@ div.ui.vertical.masthead {
 }
 
 #listen {
-  height: 400px;
+  height: 700px;
+  background: url(/roses.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 #listen h3.horizontal.divider.header {
   margin-top: 0;
+}
+
+#availability {
+  height: 700px;
+}
+#availability h3.horizontal.divider.header {
+  margin-top: 0;
+}
+
+.tagline {
+  color: #aaa;
 }
 .masthead .logo.item img {
   margin-right: 1em;
