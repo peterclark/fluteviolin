@@ -4,30 +4,42 @@ head
 body
   +header
   
-  div.ui.vertical.stripe.segment#listen
+  div.ui.vertical.stripe.segment.listen
     div.ui.container
       h3.ui.horizontal.divider.header
         i.music.icon
         | Listen
       
-    div.ui.grid.container
+    div.ui.container
       div.ui.equal.width.stackable.grid
-        div.doubling.column
-          a.ui.massive.fluid.labeled.icon.gray.button
-            i.play.icon
-            | Autumn
-        div.doubling.column
-          a.ui.massive.fluid.labeled.icon.gray.button
-            i.play.icon
-            | Bouree
-        div.doubling.column
-          a.ui.massive.fluid.labeled.icon.gray.button
-            i.play.icon
-            | Canon
-        div.doubling.column
-          a.ui.massive.fluid.labeled.icon.gray.button
-            i.play.icon
-            | Frivolity
+        div.column
+          a.ui.massive.fluid.animated.fade.gray.music.button(data-music='autumn')
+            div.hidden.content
+              i.play.icon
+            div.visible.content
+              i.play.icon
+              | Autumn
+        div.column
+          a.ui.massive.fluid.animated.fade.gray.music.button(data-music='bouree')
+            div.hidden.content
+              i.play.icon
+            div.visible.content
+              i.play.icon
+              | Bouree
+        div.column
+          a.ui.massive.fluid.animated.fade.gray.music.button(data-music='canon')
+            div.hidden.content
+              i.play.icon
+            div.visible.content
+              i.play.icon
+              | Canon
+        div.column
+          a.ui.massive.fluid.animated.fade.gray.music.button(data-music='frivolity')
+            div.hidden.content
+              i.play.icon
+            div.visible.content
+              i.play.icon
+              | Frivolity
             
   div.ui.vertical.stripe.segement#availability
     div.ui.container
