@@ -2,6 +2,10 @@
   display: none;
 }
 
+.bio {
+  text-align: justify;
+}
+
 div.ui.secondary.inverted.pointing.menu {
   border-color: transparent;
 }
@@ -28,14 +32,16 @@ div.ui.vertical.listen h3.horizontal.divider.header {
   margin-top: 0;
 }
 
-#availability {
+#prices {
   height: 700px;
 }
-#availability h3.horizontal.divider.header {
+#prices h3.horizontal.divider.header {
   margin-top: 0;
 }
 
 .tagline {
+  font-family: 'Princess Sofia', cursive;
+  font-size: 1.25em;
   color: #aaa;
 }
 .masthead .logo.item img {
@@ -45,9 +51,10 @@ div.ui.vertical.listen h3.horizontal.divider.header {
   margin-left: 0.5em;
 }
 .masthead h1.ui.header {
+  font-family: 'Princess Sofia', cursive;
   margin-top: 2em;
   margin-bottom: 0em;
-  font-size: 4em;
+  font-size: 5em;
   font-weight: normal;
 }
 .masthead h2 {
