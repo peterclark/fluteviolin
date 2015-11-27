@@ -1,0 +1,27 @@
+div.ui.small.modal#booking
+  i.close.icon
+  div.header Tell us about your event
+  div.content
+    div.ui.large.form
+      div.required.field
+        label Full Name
+        input(type='text' placeholder='Sarah Johnson')
+      div.required.field
+        label Wedding Date
+        input(type='text' placeholder='mm/dd/yyyy')
+      div.required.field
+        label Services
+        select.ui.dropdown(multiple='')
+          option(value='') Select...
+          option(value='1') Prelude
+          option(value='2') Marches
+          option(value='3') Ceremony
+      div.required.field
+        label Mobile phone
+        input(type='text' placeholder='123-456-7890')
+      div.required.inline.field
+        div.ui.toggle.checkbox
+          input.hidden(type='checkbox')
+          label I have read and understood the contract.
+  div.actions
+    button.large.ui.primary.button(type='submit') Book Now

@@ -16,6 +16,13 @@ if Meteor.isClient
       icon = $(e.target).closest('.music.button').find('i.icon')
       icon.removeClass('pause').addClass('play')
 
+    'click #book-now': (e) ->
+      $('#booking').modal('setting', 'transition', 'vertical flip').modal('show')
+
+  Template.booking.rendered = ->
+    $('.ui.dropdown').dropdown()
+    $('.ui.checkbox').checkbox()
+
 if Meteor.isServer
   Meteor.startup ->
     console.log 'this runs on the server'
