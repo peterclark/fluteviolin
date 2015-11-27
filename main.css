@@ -6,6 +6,11 @@
   text-align: justify;
 }
 
+.top {
+  vertical-align: top;
+  font-size: 0.5em;
+}
+
 div.ui.secondary.inverted.pointing.menu {
   border-color: transparent;
 }
@@ -32,11 +37,13 @@ div.ui.vertical.listen h3.horizontal.divider.header {
   margin-top: 0;
 }
 
-#prices {
-  height: 700px;
-}
 #prices h3.horizontal.divider.header {
   margin-top: 0;
+  margin-bottom: 2em;
+}
+
+table td h4 small {
+  color: #a5673f;
 }
 
 .tagline {
