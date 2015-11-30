@@ -25,7 +25,7 @@ div.ui.vertical.masthead {
   background-size: cover;
 }
 
-div.ui.vertical.listen {
+#listen {
   height: 700px;
   background: url(/roses.jpg) no-repeat center center;
   -webkit-background-size: cover;
@@ -33,13 +33,10 @@ div.ui.vertical.listen {
   -o-background-size: cover;
   background-size: cover;
 }
-div.ui.vertical.listen h3.horizontal.divider.header {
-  margin-top: 0;
-}
 
-#prices h3.horizontal.divider.header {
+div.ui.container h3.ui.horizontal.divider.header {
   margin-top: 0;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 table td h4 small {

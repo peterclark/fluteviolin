@@ -22,6 +22,10 @@ if Meteor.isClient
   Template.booking.rendered = ->
     $('.ui.dropdown').dropdown()
     $('.ui.checkbox').checkbox()
+    $('.datetimepicker').datetimepicker
+      format: 'MM/DD/YYYY'
+      viewMode: 'years'
+      useCurrent: false
 
 if Meteor.isServer
   Meteor.startup ->
