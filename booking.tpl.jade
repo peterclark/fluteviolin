@@ -3,12 +3,19 @@ div.ui.small.modal#booking
   div.header Tell us about your event
   div.content
     div.ui.large.form
+      div.three.fields
+        div.required.field
+          label Your Full Name
+          input(type='text' placeholder='First Last')
+        div.required.field
+          label Date of Event
+          input(type='text' placeholder='mm/dd/yyyy')
+        div.required.field
+          label Mobile phone
+          input(type='tel' placeholder='123-456-7890')
       div.required.field
-        label Full Name
-        input(type='text' placeholder='Sarah Johnson')
-      div.required.field
-        label Wedding Date
-        input(type='text' placeholder='mm/dd/yyyy')
+        label Event Location
+        input(type='text' placeholder='300 Alamo Plaza, San Antonio, TX 78205')
       div.required.field
         label Services
         select.ui.dropdown(multiple='')
@@ -16,12 +23,15 @@ div.ui.small.modal#booking
           option(value='1') Prelude
           option(value='2') Marches
           option(value='3') Ceremony
-      div.required.field
-        label Mobile phone
-        input(type='text' placeholder='123-456-7890')
-      div.required.inline.field
-        div.ui.toggle.checkbox
-          input.hidden(type='checkbox')
-          label I have read and understood the contract.
+      div.ui.blue.segment
+        div.required.inline.field
+          div.ui.toggle.checkbox
+            input.hidden(type='checkbox')
+            label
+              | I have read and understood the
+              a(href='/fluteviolin_contract.pdf' target='_blank') contract
   div.actions
+    button.large.basic.disabled.ui.button
+      | estimate $
+      strong 200
     button.large.ui.primary.button(type='submit') Book Now
