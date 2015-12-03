@@ -1,0 +1,18 @@
+booking
+
+{
+  customer: {
+    full_name: <String>
+    mobile_phone: <String>
+  },
+  event: {
+    date: <Date>
+    location: <String>
+  },
+  services: [
+    <String>,
+    <String>,
+    ...
+  ],
+  accept_contract: <Boolean>
+}
