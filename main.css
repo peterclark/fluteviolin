@@ -132,3 +132,28 @@ code {
     font-size: 1.5em;
   }
 }
+
+.picker__holder {
+  pointer-events: none;
+}
+.picker__wrap {
+  pointer-events: auto;
+}
+.picker__frame {
+  z-index: 1000;
+}
+
+.picker {
+  position: static;
+}
+.picker__holder {
+  max-height: 1000px;
+  position: static;
+  z-index: 1000;
+  transform: none;
+  transition: none;
+  opacity: 1;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}

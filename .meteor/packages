@@ -22,4 +22,5 @@ coffeescript
 mquandalle:jade
 semantic:ui
 flemay:less-autoprefixer
-sarasate:semantic-ui-datetimepicker
+fermuch:pickadate
+iron:router
