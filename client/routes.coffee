@@ -1,2 +1,2 @@
 Router.route '/', ->
-  render('main')
+  @render('main')
