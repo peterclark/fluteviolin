@@ -58,6 +58,7 @@ mquandalle:jade-compiler@0.4.5
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4
+peterclark:tinymodel@0.1.1
 promise@0.5.1
 random@1.0.5
 reactive-dict@1.1.3
@@ -71,6 +72,7 @@ session@1.1.1
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 standard-minifiers@1.0.2
+taskputty:underscore.string@3.0.3_5
 templating@1.1.5
 templating-tools@1.0.0
 tracker@1.0.9
