@@ -7,3 +7,7 @@ Template.booking.rendered = ->
     disable: [
       [2016,2,5]
     ]
+
+Template.booking.helpers
+  services: ->
+    MusicalService.all()

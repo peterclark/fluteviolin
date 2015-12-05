@@ -22,16 +22,14 @@ div.ui.vertical.stripe.segment#booking
         div.required.field
           label Services
           select.ui.dropdown(multiple='')
-            option(value='') Select...
-            option(value='1') Prelude
-            option(value='2') Marches
-            option(value='3') Ceremony
+            each services
+              option(value=_id) $#{price} - #{name}
       div.ui.segment
         div.required.inline.field
           div.ui.toggle.checkbox
             input.hidden(type='checkbox')
             label
-              | I have read and understood the
+              | I have read and agree to the terms of the
               a(href='/fluteviolin_contract.pdf' target='_blank') contract
       
       .ui.three.column.stackable.centered.grid
