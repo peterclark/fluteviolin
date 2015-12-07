@@ -6,32 +6,32 @@ div.ui.vertical.stripe.segment#booking
       
     div.ui.large.form
       div.three.fields
-        div.required.field
+        div.required.full_name.field
           label Your Full Name
-          input(type='text' placeholder='First Last')
-        div.required.field
+          input#full_name(type='text' name='full_name' placeholder='First Last')
+        div.required.mobile.field
           label Mobile phone
-          input(type='tel' placeholder='123-456-7890')
-        div.required.field
+          input#mobile(type='tel' name='mobile' placeholder='123-456-7890')
+        div.required.event_date.field
           label Date of Event
-          input.ui.datepicker(type='text' placeholder='25 June 2020')
+          input.ui.datepicker#event_date(type='text' name='event_date' placeholder='25 June 2020')
       div.two.fields
-        div.required.field
+        div.required.event_location.field
           label Event Location
-          input(type='text' placeholder='300 Alamo Plaza, San Antonio, TX 78205')
-        div.required.field
+          input#event_location(type='text' name='event_location' placeholder='300 Alamo Plaza, San Antonio, TX 78205')
+        div.required.services.field
           label Services
-          select.ui.dropdown(multiple='')
+          select.ui.dropdown#services(multiple='' name='service_ids')
             each services
               option(value=_id) $#{price} - #{name}
       div.ui.segment
-        div.required.inline.field
+        div.required.inline.contract_accepted.field
           div.ui.toggle.checkbox
-            input.hidden(type='checkbox')
+            input.hidden#contract_accepted(type='checkbox' name='contract_accepted')
             label
               | I have read and agree to the terms of the
               a(href='/fluteviolin_contract.pdf' target='_blank') contract
       
       .ui.three.column.stackable.centered.grid
         .column
-          button.massive.fluid.ui.primary.button(type='submit') Book Now
+          button.massive.fluid.ui.primary.button#book-now(type='submit') Book Now

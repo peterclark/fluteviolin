@@ -13,6 +13,3 @@ Template.body.events
   'ended audio': (e) ->
     icon = $(e.target).closest('.music.button').find('i.icon')
     icon.removeClass('pause').addClass('play')
-
-  'click #book-now': (e) ->
-    $('#booking').modal('setting', 'transition', 'vertical flip').modal('show')
