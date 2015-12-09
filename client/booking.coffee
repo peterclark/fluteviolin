@@ -22,10 +22,14 @@ Template.booking.events
       event_date: $('#event_date').val()
       event_location: $('#event_location').val()
       services: $('#services').val()
-      contract_accepted: $('#contract_accepted').val()
+      contract_accepted: $('#contract_accepted').is(':checked')
 
     if booking.isValid()
       Meteor.call "insertBooking", booking, (error, result) ->
+        if error
+          console.log error.reason
+        else
+          console.log 'booking inserted'
     else
       fields = (Object.keys(field)[0] for field in booking.errors)
       inputs = (".#{field}" for field in fields)

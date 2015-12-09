@@ -2,23 +2,18 @@ Meteor.methods
 
   insertBooking: (params) ->
 
-    customer = new Customer(params.customer)
-    if customer.isInvalid()
-      throw new Meteor.Error("invalid-customer", "Please provide full name & mobile number.")
-
-    m_event = new MusicalEvent(params.musical_event)
-    if m_event.isInvalid()
-      throw new Meteor.Error("invalid-event", "Please provide event date & location.")
-
-    services = MusicalService.find_by_ids( params.service_ids )
+    services = MusicalService.find_by_ids( params.services )
 
     booking = new Booking
-      customer: customer
-      event: m_event
+      full_name: params.full_name
+      mobile: params.mobile
+      event_date: params.event_date
+      event_location: params.event_location
       services: services
-      accept_contract: params.accept_contract
+      contract_accepted: params.contract_accepted
 
     if booking.insert()
       console.log "Your booking was submitted"
     else
-      throw new Meteor.Error("invalid-booking")
+      console.log booking.errors
+      throw new Meteor.Error("invalid-booking", "The booking is invalid")

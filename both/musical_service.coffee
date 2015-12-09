@@ -35,5 +35,6 @@ class @MusicalService
   @all: ->
     WEDDING.concat RECEPTION, BOTH
 
-  @find_by_ids: (service_ids)->
+  @find_by_ids: (service_ids=[]) ->
+    service_ids = (+id for id in service_ids)
     (service for service in MusicalService.all() when service._id in service_ids)
