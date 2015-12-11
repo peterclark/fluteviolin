@@ -25,11 +25,13 @@ Template.booking.events
       contract_accepted: $('#contract_accepted').is(':checked')
 
     if booking.isValid()
+      $('#book-now').addClass 'loading'
       Meteor.call "insertBooking", booking, (error, result) ->
         if error
           console.log error.reason
         else
           console.log 'booking inserted'
+          $('.dimmer').dimmer('show')
     else
       fields = (Object.keys(field)[0] for field in booking.errors)
       inputs = (".#{field}" for field in fields)
