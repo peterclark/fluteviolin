@@ -122,7 +122,12 @@ table td h4 small {
 }
 
 .footer.segment {
-  padding: 5em 0em;
+  padding: 3em 0em;
+}
+
+.footer h3.header {
+  padding-bottom: 1em;
+  font-family: 'Princess Sofia', cursive;
 }
 
 .secondary.pointing.menu .toc.item {
@@ -162,5 +167,9 @@ code {
     height: 300px;
     padding: 1em 0em;
     background: #222;
+  }
+  #listen .column {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
   }
 }
