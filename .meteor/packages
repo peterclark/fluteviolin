@@ -20,7 +20,8 @@ coffeescript
 mquandalle:jade
 semantic:ui
 flemay:less-autoprefixer
-fermuch:pickadate
 iron:router
 peterclark:tinymodel
 mrt:twilio-meteor
+momentjs:moment
+richsilv:pikaday

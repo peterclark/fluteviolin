@@ -1,12 +1,11 @@
 Template.booking.rendered = ->
   $('.ui.dropdown').dropdown()
   $('.ui.checkbox').checkbox()
-  $('.datepicker').pickadate
-    min: +1
-    max: +365
-    disable: [
-      [2016,2,5]
-    ]
+  picker = new Pikaday
+    field: $('#event_date')[0]
+    minDate: moment().add(1, 'day').toDate()
+    maxDate: moment().add(365, 'days').toDate()
+    format: 'D MMMM, YYYY'
 
 Template.booking.helpers
   services: ->
