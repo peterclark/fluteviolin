@@ -1,5 +1,6 @@
-Template.body.events
+Template.listen.events
   'click .music.button': (e) ->
+    console.log 'clicked'
     button  = $(e.target).closest('a.button')
     icon    = button.find('i.icon')
     music   = button.find('audio')[0]
