@@ -158,4 +158,9 @@ code {
     margin-top: 0.5em;
     font-size: 1.5em;
   }
+  div.ui.vertical.masthead {
+    height: 300px;
+    padding: 1em 0em;
+    background: #222;
+  }
 }
