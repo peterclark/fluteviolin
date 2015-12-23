@@ -17,10 +17,10 @@ class @Booking extends TinyModel
   @validates 'contract_accepted', presence: true, inclusion: { in: [true] }
 
   first_name: ->
-    @full_name.split(' ')[0]
+    @full_name.split(' ')[0] if @full_name
 
   last_name: ->
-    @full_name.split(' ')[1]
+    @full_name.split(' ')[1] if @full_name
 
   twilio_phone: ->
     phone = @mobile.replace /-/g, ''

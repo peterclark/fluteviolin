@@ -39,12 +39,15 @@ div.ui.vertical.stripe.segment#booking
           label Services
           select.ui.dropdown#services(multiple='' name='service_ids')
             each services
-              option(value=_id) $#{price} - #{name}
+              option(value=_id selected=service_selected(_id)) $#{price} - #{name}
       div.ui.segment
         div.required.inline.contract_accepted.field
           div.ui.toggle.checkbox
-            input.hidden#contract_accepted(type='checkbox' name='contract_accepted')
-            label
+            input.hidden#contract_accepted(
+              type='checkbox'
+              name='contract_accepted'
+              checked=booking.contract_accepted)
+            label(for="contract_accepted")
               | I have read and agree to the terms of the
               a(href='/fluteviolin_contract.pdf' target='_blank') contract
       

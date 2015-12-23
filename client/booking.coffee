@@ -14,6 +14,9 @@ Template.booking.helpers
   booking: ->
     Meteor.settings.public.booking
 
+  service_selected: (id) ->
+    'true' if id in Meteor.settings.public.booking.services
+
 Template.booking.events
   'click #book-now': (e) ->
     e.preventDefault()
