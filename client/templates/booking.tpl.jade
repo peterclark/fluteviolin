@@ -8,17 +8,33 @@ div.ui.vertical.stripe.segment#booking
       div.three.fields
         div.required.full_name.field
           label Your Full Name
-          input#full_name(type='text' name='full_name' placeholder='First Last')
+          input#full_name(
+            type='text'
+            name='full_name'
+            placeholder='First Last'
+            value=booking.full_name)
         div.required.mobile.field
           label Mobile phone
-          input#mobile(type='tel' name='mobile' placeholder='123-456-7890')
+          input#mobile(
+            type='tel' 
+            name='mobile' 
+            placeholder='123-456-7890' 
+            value=booking.mobile)
         div.required.event_date.field
           label Date of Event
-          input.ui.datepicker#event_date(type='text' name='event_date' placeholder='25 June 2020')
+          input.ui.datepicker#event_date(
+            type='text' 
+            name='event_date' 
+            placeholder='25 June 2020' 
+            value=booking.event_date)
       div.two.fields
         div.required.event_location.field
           label Event Location
-          input#event_location(type='text' name='event_location' placeholder='300 Alamo Plaza, San Antonio, TX 78205')
+          input#event_location(
+            type='text' 
+            name='event_location' 
+            placeholder='300 Alamo Plaza, San Antonio, TX 78205'
+            value=booking.event_location)
         div.required.services.field
           label Services
           select.ui.dropdown#services(multiple='' name='service_ids')
@@ -35,10 +51,3 @@ div.ui.vertical.stripe.segment#booking
       .ui.three.column.stackable.centered.grid
         .column
           button.massive.fluid.ui.primary.button#book-now(type='submit') Book Now
-          
-  div.ui.dimmer
-    .content
-      .center
-        h2.ui.inverted.icon.header
-          i.heart.icon
-          | You've booked Flute & Violin!

@@ -21,3 +21,16 @@ class @Booking extends TinyModel
 
   last_name: ->
     @full_name.split(' ')[1]
+
+  twilio_phone: ->
+    phone = @mobile.replace /-/g, ''
+    "+1#{phone}"
+
+  selected_services: ->
+    (service.name for service in @services).join(', ')
+
+  total_cost: ->
+    prices = (service.price for service in @services)
+    prices.reduce (x,y) ->
+      x+y
+    , 0

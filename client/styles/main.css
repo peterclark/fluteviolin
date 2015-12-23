@@ -37,7 +37,10 @@ div.ui.vertical.masthead {
 #booking {
   background-color: aliceblue;
   border-top: 1px solid rgba(0,0,0,.1);
-  box-shadow: inset 0px 10px 8px -8px rgba(0,0,0,0.2)
+}
+
+input#event_date {
+  font-size: 16px;
 }
 
 .massive.primary.button {
@@ -172,7 +175,6 @@ code {
 }
 .picker__holder {
   max-height: 1000px;
-  position: static;
   z-index: 1000;
   transform: none;
   transition: none;

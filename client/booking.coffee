@@ -12,6 +12,9 @@ Template.booking.helpers
   services: ->
     MusicalService.all()
 
+  booking: ->
+    Meteor.settings.public.booking
+
 Template.booking.events
   'click #book-now': (e) ->
     e.preventDefault()
@@ -30,8 +33,10 @@ Template.booking.events
         if error
           console.log error.reason
         else
+          setTimeout ->
+            $('#book-now').removeClass('loading')
+          , 2000
           console.log 'booking inserted'
-          $('.dimmer').dimmer('show')
     else
       fields = (Object.keys(field)[0] for field in booking.errors)
       inputs = (".#{field}" for field in fields)
