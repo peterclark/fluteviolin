@@ -18,7 +18,7 @@ Meteor.methods
       twilio.sendSms
         to: booking.twilio_phone()
         from: Meteor.settings.twilio.from_mobile
-        body: "Hi #{booking.full_name}, we received your request for Flute & Violin to play at your event on #{booking.event_date}. We'll contact you soon to confirm the date.\n ~ Leah & Ellen"
+        body: "Hi #{booking.first_name()}, we received your request for Flute & Violin to play at your event. We'll contact you soon to confirm the date.\n ~ Leah & Ellen"
       , (err, response) ->
         if err
           console.log err

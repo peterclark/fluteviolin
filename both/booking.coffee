@@ -9,10 +9,10 @@ class @Booking extends TinyModel
   @field 'services', default: []
   @field 'contract_accepted', default: false
 
-  @validates 'full_name', presence: true, length: { in: [5..50] }
-  @validates 'mobile', presence: true, format: { with: /^(\d{3})-(\d{3})-(\d{4})$/ }
-  @validates 'event_date', presence: true
-  @validates 'event_location', presence: true, length: { in: [5..50] }
+  @validates 'full_name', presence: true, length: { in: [5..30] }
+  @validates 'mobile', presence: true, format: { with: /^(\d{10})$/ }
+  @validates 'event_date', presence: true, format: { with: /^(\d{1,2}) (\w{3,9}), (\d{4})$/ }
+  @validates 'event_location', presence: true, length: { in: [5..100] }
   @validates 'services', presence: true, length: { min: 1 }
   @validates 'contract_accepted', presence: true, inclusion: { in: [true] }
 
@@ -23,8 +23,7 @@ class @Booking extends TinyModel
     @full_name.split(' ')[1] if @full_name
 
   twilio_phone: ->
-    phone = @mobile.replace /-/g, ''
-    "+1#{phone}"
+    "+1#{@mobile}"
 
   selected_services: ->
     (service.name for service in @services).join(', ')
