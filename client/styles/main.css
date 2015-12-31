@@ -166,7 +166,7 @@ code {
   div.ui.vertical.masthead {
     height: 300px;
     padding: 1em 0em;
-    background: #222;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(background-mobile.jpg) no-repeat center center;
   }
   #listen .column {
     padding-left: 10% !important;
