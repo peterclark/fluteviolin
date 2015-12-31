@@ -22,7 +22,7 @@ class @Booking extends TinyModel
   last_name: ->
     @full_name.split(' ')[1] if @full_name
 
-  twilio_phone: ->
+  number: ->
     "+1#{@mobile}"
 
   selected_services: ->

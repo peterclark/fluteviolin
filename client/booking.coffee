@@ -1,4 +1,5 @@
 Template.booking.rendered = ->
+  Session.set('booking', Meteor.settings.public.booking)
   $('.ui.dropdown').dropdown()
   $('.ui.checkbox').checkbox()
   picker = new Pikaday
@@ -12,7 +13,7 @@ Template.booking.helpers
     MusicalService.all()
 
   booking: ->
-    Meteor.settings.public.booking
+    Session.get('booking')
 
   service_selected: (id) ->
     'true' if id in Meteor.settings.public.booking.services
@@ -37,6 +38,9 @@ Template.booking.events
         else
           setTimeout ->
             $('#book-now').removeClass('loading')
+            Session.set('booking', new Booking)
+            $('.ui.dropdown').dropdown('clear')
+            $('.ui.basic.modal').modal('show')
           , 2000
           console.log 'booking inserted'
     else
