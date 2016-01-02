@@ -14,9 +14,6 @@ Template.booking.helpers
   booking: ->
     Session.get('booking')
 
-  service_selected: (id) ->
-    'true' if id in Session.get('booking').services
-
 Template.booking.events
   'click #book-now': (e) ->
     e.preventDefault()
@@ -46,4 +43,3 @@ Template.booking.events
       fields = (Object.keys(field)[0] for field in booking.errors)
       inputs = (".#{field}" for field in fields)
       $(inputs.join(', ')).addClass 'error'
-      console.log booking

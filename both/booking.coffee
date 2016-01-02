@@ -27,9 +27,3 @@ class @Booking extends TinyModel
 
   selected_services: ->
     (service.name for service in @services).join(', ')
-
-  total_cost: ->
-    prices = (service.price for service in @services)
-    prices.reduce (x,y) ->
-      x+y
-    , 0

@@ -7,7 +7,6 @@ class @Txt
   ADMIN = Meteor.settings.twilio.admin_mobile
 
   @sendBookingToCustomer: (booking) ->
-    console.log booking
     twilio = Twilio( SID, TOKEN )
     twilio.sendSms
       to: booking.number()
@@ -18,7 +17,6 @@ class @Txt
         console.log err
         Txt.sendErrorToAdmin( err, booking )
       else
-        console.log "FROM: #{response.from}"
         console.log "BODY: #{response.body}"
         Txt.sendBookingToOwner( booking )
 
@@ -27,7 +25,7 @@ class @Txt
     twilio.sendSms
       to: OWNER
       from: NUMBER
-      body: "#{booking.full_name} (#{booking.number()}) booked services for #{booking.event_date}"
+      body: "#{booking.full_name} (#{booking.number()}) booked services for #{booking.event_date}. #{process.env.ROOT_URL}bookings/#{booking._id}"
     , (err, response) ->
       if err
         console.log err

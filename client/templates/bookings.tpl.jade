@@ -3,19 +3,33 @@ div.ui.vertical.stripe.segment#bookings
     h3.ui.horizontal.divider.header
       i.calendar.icon
       | Booking
-      = _id
       
-    .ui.green.card
+    .ui.centered.green.card
       .content
-        i.right.floated.like.icon
-        i.right.floated.star.icon
-        .header Cute Dog
+        if contract_accepted
+          i.right.floated.green.checkmark.up.icon
+        else
+          i.right.floated.red.ban.icon
+        .header= full_name
+        div.ui.divider
         .description
+          each services
+            p.center.aligned
+              em= name
           p
+            i.marker.icon
+            = event_location
+          p
+            i.calendar.outline.icon
+            = event_date
+          p
+            i.phone.icon
+            = mobile
+              
       .extra.content
-        span.left.floated.like
-          i.like.icon
-          | Like
-        span.right.floated.star
-          i.star.icon
-          | Favorite
+        span.left.floated.at
+          i.at.icon
+          = created
+        span.right.floated.dollar
+          i.dollar.icon
+          = total_cost
