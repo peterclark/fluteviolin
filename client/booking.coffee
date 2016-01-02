@@ -1,5 +1,4 @@
 Template.booking.rendered = ->
-  Session.set('booking', Meteor.settings.public.booking)
   $('.ui.dropdown').dropdown()
   $('.ui.checkbox').checkbox()
   picker = new Pikaday
@@ -16,7 +15,7 @@ Template.booking.helpers
     Session.get('booking')
 
   service_selected: (id) ->
-    'true' if id in Meteor.settings.public.booking.services
+    'true' if id in Session.get('booking').services
 
 Template.booking.events
   'click #book-now': (e) ->
