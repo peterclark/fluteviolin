@@ -25,7 +25,7 @@ class @Txt
     twilio.sendSms
       to: OWNER
       from: NUMBER
-      body: "#{booking.full_name} (#{booking.number()}) booked services for #{booking.event_date}. #{process.env.ROOT_URL}bookings/#{booking._id}"
+      body: "#{booking.full_name} (#{booking.number()}) booked services for #{booking.event_date}. http://fluteviolin.meteor.com/bookings/#{booking._id}"
     , (err, response) ->
       if err
         console.log err
