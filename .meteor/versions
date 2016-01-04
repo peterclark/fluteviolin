@@ -71,6 +71,7 @@ semantic:ui-data@2.1.7
 session@1.1.1
 spacebars@1.0.7
 spacebars-compiler@1.0.7
+spiderable@1.0.9
 standard-minifiers@1.0.2
 taskputty:underscore.string@3.0.3_5
 templating@1.1.5
