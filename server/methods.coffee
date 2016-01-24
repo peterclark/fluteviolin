@@ -12,6 +12,7 @@ Meteor.methods
       services: services
       contract_accepted: params.contract_accepted
 
+    booking.calculateFee()
     if booking.insert()
       Txt.sendBookingToCustomer( booking )
     else

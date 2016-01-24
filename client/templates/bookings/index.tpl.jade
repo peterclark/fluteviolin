@@ -1,0 +1,52 @@
+div.ui.vertical.stripe.segment#bookings
+  div.ui.container
+    h3.ui.horizontal.divider.header
+      i.calendar.icon
+      | Bookings
+    
+    .ui.pagination.menu
+      a.item(href="/bookings/page/#{previousPage}")
+        i.chevron.left.icon
+      a.item= currentPage
+      a.item(href="/bookings/page/#{nextPage}")
+        i.chevron.right.icon
+    
+    table.ui.striped.table
+      thead
+        tr
+          th
+            i.at.icon
+          th
+            i.user.icon
+            | Name
+          th
+            i.marker.icon
+            | Location
+          th
+            i.calendar.outline.icon
+            | Date
+          th
+            i.phone.icon
+            | Phone
+          th
+            i.dollar.icon
+            | Fee
+          th
+            i.file.text.outline.icon
+      tbody
+        each bookings
+          tr
+            td
+              a(href="/bookings/#{_id}")= created
+            td= full_name
+            td
+              a(href=mapLink)= event_location
+            td= event_date
+            td
+              a(href="tel:#{mobile}")= mobile
+            td= service_fee
+            td
+              if contract_accepted
+                i.green.checkmark.icon
+              else
+                i.red.ban.icon

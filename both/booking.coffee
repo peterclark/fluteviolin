@@ -8,6 +8,7 @@ class @Booking extends TinyModel
   @field 'event_location', default: undefined
   @field 'services', default: []
   @field 'contract_accepted', default: false
+  @field 'service_fee', default: 0.0
 
   @validates 'full_name', presence: true, length: { in: [5..30] }
   @validates 'mobile', presence: true, format: { with: /^(\d{10})$/ }
@@ -27,3 +28,9 @@ class @Booking extends TinyModel
 
   selected_services: ->
     (service.name for service in @services).join(', ')
+
+  calculateFee: ->
+    prices = (service.price for service in @services)
+    @service_fee = prices.reduce (x,y) ->
+      x+y
+    , 0
