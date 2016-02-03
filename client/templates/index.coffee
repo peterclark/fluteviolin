@@ -17,3 +17,6 @@ Template.index.helpers
 
   currentPage: ->
     (+Router.current().params.page || 1)
+
+  disabled: (page) ->
+    'disabled' if page==0

@@ -5,7 +5,7 @@ div.ui.vertical.stripe.segment#bookings
       | Bookings
     
     .ui.pagination.menu
-      a.item(href="/bookings/page/#{previousPage}")
+      a.item(href="/bookings/page/#{previousPage}" class=disabled(previousPage))
         i.chevron.left.icon
       a.item= currentPage
       a.item(href="/bookings/page/#{nextPage}")
