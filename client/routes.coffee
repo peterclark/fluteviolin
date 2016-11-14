@@ -2,6 +2,7 @@ Router.route '/', ->
   @.render 'main'
 
 Router.route '/bookings/:_id',
+  name: 'booking',
   loadingTemplate: 'loading',
   waitOn: ->
     Meteor.subscribe('booking', @.params._id)
@@ -13,6 +14,7 @@ Router.route '/bookings/:_id',
     @.render 'bookings'
 
 Router.route '/bookings/page/:page',
+  name: 'booking-by-page',
   loadingTemplate: 'loading',
   waitOn: ->
     Meteor.subscribe('bookingsByPage', (+@.params.page)*10)
