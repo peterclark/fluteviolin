@@ -15,6 +15,14 @@ div.ui.secondary.inverted.pointing.menu {
   border-color: transparent;
 }
 
+div.ui.secondary.inverted.pointing.menu a.item,
+div.ui.secondary.inverted.pointing.menu a.button {
+  font-family: 'Poiret One';
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 div.ui.vertical.masthead {
   height: 700px;
   padding: 1em 0em;
@@ -50,16 +58,29 @@ input#event_date {
 div.ui.container h3.ui.horizontal.divider.header {
   margin-top: 0;
   margin-bottom: 1em;
+  font-family: 'Poiret One' !important;
+  font-size: 40px;
+  text-transform: lowercase;
 }
 
-table td h4 small {
-  color: #a5673f;
+div.ui.container h3 i.icon {
+  font-size: 40px;
+}
+
+.tiny.blue.statistic div.value {
+  font-family: 'Poiret One';
+}
+
+table.ui.table h4 small {
+  color: #2185d0;
 }
 
 .tagline {
   font-family: 'Poiret One', cursive;
   font-size: 1.25em;
   color: #aaa;
+  margin-top: -14px !important;
+  letter-spacing: 2px !important;
 }
 
 .ui.segment.callout {
