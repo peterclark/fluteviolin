@@ -104,7 +104,7 @@ table.ui.table h4 small {
 }
 .masthead h1.ui.header {
   font-family: 'Princess Sofia', cursive;
-  margin-top: 2em;
+  margin-top: 1.5em;
   margin-bottom: 0em;
   font-size: 5em;
   font-weight: normal;
@@ -179,6 +179,7 @@ code {
   .masthead h1.ui.header {
     font-size: 2em;
     margin-top: 1.5em;
+    margin-bottom: .15em
   }
   .masthead h2 {
     margin-top: 0.5em;
